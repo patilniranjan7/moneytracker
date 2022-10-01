@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  background: rgb(218, 218, 218);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -14,4 +15,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.header{
+  background: rgb(242, 242, 242);
+}
+.hoverEffect:hover label{
+  color: black;
 }
