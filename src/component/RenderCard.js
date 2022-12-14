@@ -1,23 +1,22 @@
 import React from 'react';
-import AddCardPopup from '../../layout/AddCardPopup';
-import Card from '../../layout/Card';
+import AddCardPopup from '../layout/AddCardPopup';
+import CardUI from './UI/CardUI';
 
-const Income = ({ data, ...props }) => {
-    console.log(data)
+const RenderCard = ({ data, name }) => {
     return (
         <div className='flex flex-row flex-wrap justify-center grow'>
             {
                 (data || []).map((item, index) => {
                     return (
-                        <Card className='cursor-default'>
+                        <CardUI className='cursor-default'>
                             {item.name}
-                        </Card>
+                        </CardUI>
                     )
                 })
             }
-            <AddCardPopup name='Income' />
+            <AddCardPopup name={name} />
         </div>
     );
 }
 
-export default Income;
+export default RenderCard;

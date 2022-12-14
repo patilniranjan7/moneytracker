@@ -36,9 +36,6 @@ const RouteList = () => {
         <PrivateRoute exact path="/">
           <Home />
         </PrivateRoute>
-        <PrivateRoute exact path="/:id">
-          <Home />
-        </PrivateRoute>
         <Route exact path="/login" component={Login} />
       </Switch>
     </Router>
