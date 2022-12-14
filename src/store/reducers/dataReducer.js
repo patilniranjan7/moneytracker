@@ -1,25 +1,21 @@
-export const ADD_PODCASTS = "ADD_PODCASTS";
-export const REMOVE_PODCASTS = "REMOVE_PODCASTS";
+import { ADD_NEW } from "../actions/AddDataActions";
+
 
 const initialState = {
-    podcasts: [],
-    currentPodcastIndex: 0,
-    autoPlay: false,
+    Income: [],
+    Expenditure: [],
 }
 
 function dataReducer(state = initialState, action) {
+    debugger
     switch (action.type) {
-        case ADD_PODCASTS:
-            const { podcasts, currentPodcastIndex, autoPlay } = action.data;
-            if (state?.podcasts[currentPodcastIndex]?.id !== podcasts[currentPodcastIndex]?.id)
-                return {
-                    podcasts: podcasts,
-                    currentPodcastIndex: currentPodcastIndex,
-                    autoPlay: autoPlay,
-                };
-            else return state
-        case REMOVE_PODCASTS:
-            return initialState
+        case ADD_NEW:
+            const data = state[action.data.from];
+            data.push(action.data)
+            return {
+                ...state,
+                data
+            };
         default:
             return state;
     }
